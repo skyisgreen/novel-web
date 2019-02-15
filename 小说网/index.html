@@ -1,0 +1,265 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>首页</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <style type="text/css">
+            .hot li{
+                color: white;
+                background-color: rgb(203, 158, 240);
+                padding: 3px;
+                border-bottom: 0.5px dashed white;
+                list-style: none;
+            }
+            .hot li a{
+                color: white;
+            }
+
+            .ren{
+                width:74%; 
+                height: 98%; 
+                /* background-color: rgb(203, 158, 240); */
+                border-radius: 10px; 
+                padding: 1%; 
+                float: right; 
+                display: flex;
+            }
+
+            .ren div{
+                width: 21%; 
+                height: 90%; 
+                background-color: white; 
+                margin: 2%; 
+                padding: 1%
+            }
+
+            .ren div img{
+                width: 98%;
+                height: 70%;
+            }
+
+            .ren div h3{
+                text-align: center;
+            }
+
+            .ren div h3 a{
+                color: black;
+            }
+
+            .ren div p{
+                text-align: center;
+            }
+
+            .all{
+                height: 70%; 
+                background-color: white;
+                border-radius: 10px;
+                margin-top: 2%;
+                padding: 1%; 
+                display:flex;
+                flex-wrap: wrap;
+                align-content: flex-start;
+            }
+
+            .all h3{
+                width:100%; 
+                margin-top: 3px; 
+                margin-left: 10px;
+            }
+
+            .all div{
+                width: 23%; 
+                height: 27%; 
+                /* background-color: slateblue; */
+                margin: 1%;
+                display: flex;
+                /* padding: 1% */
+            }
+
+            .all div img{
+                width: 40%;
+                height: 100%;
+                margin-right: 5%;
+            }
+
+            .all div h4{
+                writing-mode:tb-rl;
+                margin: 5px;
+            }
+
+            .all div div{
+                width: 100%;
+                height: 120%;
+                flex-wrap: wrap;
+                align-content: flex-start;
+            }
+
+            .all div div span{
+                position: relative;
+                bottom: 0%;
+                height: 25px;
+                border: 1px solid gray;
+                padding: 2px;
+                border-radius: 3px;
+            }
+
+        </style>
+    </head>
+    <body style="background-color:aliceblue;">
+        
+        <div class="container">
+            <!-- 导航条 -->
+            <nav class="navbar navbar-default ">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">小说网</a>
+                </div>
+
+                <div>
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="active"><a href="#">全部</a></li>
+                        <li><a href="#">古代言情</a></li>
+                        <li><a href="#">现代言情</a></li>
+                        <li><a href="#">玄幻仙侠</a></li>
+                        <li><a href="#">灵异科幻</a></li>
+                    </ul>
+                </div>
+                <div style="margin-right:10px;">
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="输入书名">
+                            <button type="submit" class="btn btn-default">查询</button>
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">登录</a></li>
+                        <li><a href="#">注册</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- 推荐书籍 -->
+            <div style="height: 45%; background-color: white; border-radius: 10px; padding: 2%;">
+
+                <!-- 本月热门 -->
+                <div style="width:25%; height: 98%; background-color: rgb(203, 158, 240);border-radius: 10px; padding: 2%; float: left;">
+                    <p style="margin-left:3%; color: white;"><font size="4"><strong>本月热门</strong></font></p>
+                    
+                    <ul class="hot" style="margin-left:-15%;">
+                        <li><a>斗破苍穹</a</li>
+                        <li><a>武动乾坤</a</li>
+                        <li><a>大主宰</a</li>
+                        <li><a>剑仙</a</li>
+                        <li><a>白日飞升</a</li>
+                    </ul>
+                </div>
+
+                <!-- 人气书籍 -->
+                <div class="ren">
+
+                    <div>
+                        <img src="images/一世清廉.jpg" alt="..." class="img-rounded">
+                        <!-- <div><h3><a href="#">一世清廉</a></h3></div> -->
+                        <h3><a href="#">一世清廉</a></h3>
+                        <p>作者</p>
+                    </div>
+
+                    <div>
+                        <img src="images/君生欢喜.jpg" alt="..." class="img-rounded">
+                        <h3><a href="#">君生欢喜</a></h3>
+                        <p>作者</p>
+                    </div>
+
+                    <div>
+                        <img src="images/妃请入翁.jpg" alt="..." class="img-rounded">
+                        <h3><a href="#">妃请入翁</a></h3>
+                        <p>作者</p>
+                    </div>
+
+                    <div>
+                        <img src="images/将夜.jpg" alt="..." class="img-rounded">
+                        <h3><a href="#">将夜</a></h3>
+                        <p>作者</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 所有书籍 -->
+            <div class="all">
+
+                <h3>全部书籍</h3>
+
+                <div>
+                    <img src="images/一世清廉.jpg" alt="..." class="img-rounded">
+                    <h4>一世清廉</h4><br>
+                    <div><p>江湖上有这么一句话，‘人面阎王坐朝堂人面阎王坐朝堂，</p><span>古代言情</span></div>
+                </div>
+
+                <div>
+                    <img src="images/君生欢喜.jpg" alt="..." class="img-rounded">
+                    <h4>君生欢喜</h4><br>
+                    <div><p>她叫欢喜，是欢喜娘取得，希望欢喜可以欢欢喜喜的生活。却在十六岁那年，一切都变了。。。</p><span>古代言情</span></div>
+                </div>
+
+                <div>
+                    <img src="images/一世清廉.jpg" alt="..." class="img-rounded">
+                    <h4>一世清廉</h4><br>
+                    <div><p>江湖上有这么一句话...</p><span>古代言情</span></div>
+                </div>
+
+                <div>
+                    <img src="images/君生欢喜.jpg" alt="..." class="img-rounded">
+                    <h4>君生欢喜</h4><br>
+                    <div><p>她叫欢喜，是欢喜娘取得，希望欢喜可以欢欢喜喜的生活。却在十六岁那年。。。</p><span>古代言情</span></div>
+                </div>
+
+                <div>
+                    <img src="images/君生欢喜.jpg" alt="..." class="img-rounded">
+                    <h4>君生欢喜</h4><br>
+                    <div><p>她叫欢喜，是欢喜娘取得，希望欢喜可以欢欢喜喜的生活。却在十六岁那年。。。</p><span>古代言情</span></div>
+                </div>
+                <div></div>
+
+                <div></div>
+
+                <div></div>
+
+                <div></div>
+
+                <div></div>
+
+                <div></div>
+
+            </div>
+
+            <!-- 分页 -->
+            <div style="text-align: center">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        
+
+    </body>
+</html>
