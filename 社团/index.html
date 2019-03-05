@@ -50,163 +50,175 @@
                                 <ul class="header-links hidden-xs">
                                     <li><a class="my-account" href="#">南方学院</a></li>
                                    
-                                    <head>
-                                        <meta charset="utf-8"> 
-                                        <title>Bootstrap 用户登陆</title>
-                                        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-                                        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-                                        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-                                    </head>
-                                    <body>
-                                    
-                                    
-                                    <!-- 按钮触发模态框 -->
-                                    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                                        Login
-                                    </button>
-                                    <!-- 模态框（Modal） -->
-                                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                                        &times;
-                                                    </button>
-                                                    <head>
-                                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-                                    <link href="css/regist.css" rel="stylesheet" type="text/css">
-                                    <title>网上购物系统</title>
-                                    <script type="text/javascript">
-                                    var reg=/^[a-zA-Z]\w*$/;
-                                    var flag1=false,flag2=false,flag3=false;
-                                    function chang1(obj){
-                                        var name=obj.value;
-                                        if(name.length<3||name.length>8){
-                                            //alert("密码要求3-8位！");
-                                            document.getElementById("usName").innerHTML="<font color='red'> 用户名要求3-8位！</font>";
-                                        }
-                                        else if(!reg.test(name)){
-                                            //alert("用户名由字母开头，后字母、数字或下划线!");
-                                            document.getElementById("usName").innerHTML="<font color='red'> 用户名由字母开头，后字母、数字或下划线</font>";
-                                            flag1=false;
-                                        }
-                                        else{
-                                            flag1=true;
-                                            document.getElementById("usName").innerHTML="<font color='green'>可以使用</font>";
-                                        }
-                                    }
-                                    function chang2(obj){
-                                        var pwd=obj.value;
-                                        if(pwd.length<6||pwd.length>8){
-                                            //alert("密码要求3-8位！");
-                                            document.getElementById("ps1").innerHTML="<font color='red'>密码要求3-8位！</font>";
-                                        flag2=false;
-                                        }
-                                        else{
-                                            document.getElementById("ps1").innerHTML="<font color='green'>可以使用</font>";
-                                            flag2=true;
-                                        }
-                                    }
-                                    function chang3(obj){
-                                        var pwd1=obj.value;
-                                        var pwd=document.regist.password.value;
-                                        if(pwd1.length<6||pwd1.length>8){
-                                            //alert("密码要求3-8位！");
-                                            document.getElementById("ps2").innerHTML="<font color='red'>密码要求3-8位！</font>";
-                                        }
-                                        else if(pwd!=pwd1){
-                                            //alert("两次输入密码不一致！");
-                                            document.getElementById("ps2").innerHTML="<font color='red'>两次输入密码不一致！</font>";
-                                        flag3=false;
-                                        }
-                                        else{
-                                            document.getElementById("ps2").innerHTML="<font color='green'>可以使用</font>";
-                                            flag3=true;
-                                        }
-                                    }
-                                    function sub(){
-                                        if(flag1&&flag2&&flag3){
-                                            document.regist.submit();
-                                        }
-                                        else{
-                                            alert("请填写注册信息");
-                                        }
-                                    }
-                                    function res(){
-                                        document.regist.username.value="";
-                                        document.regist.password.value="";
-                                        document.regist.passwordAgain.value="";
-                                        document.getElementById("usName").innerHTML="";
-                                        document.getElementById("ps1").innerHTML="";
-                                        document.getElementById("ps2").innerHTML="";
-                                    }
-                                    </script>
-                                    </head>
-                                    <body>
-                                    <form method="POST" name="regist" action="RegistJsp.jsp">
-                                    <table style="height: 100%; width: 100%">
-                                        <tr align="center" valign="middle">
-                                            <td>
-                                            <TABLE width="392" height="200" border=0 align="center" cellPadding=0
-                                                cellSpacing=0
-                                                style="background-image: url(./images/login_Page/logPage.jpg); height: 200; width: 392">
-                                                <TBODY>
-                                                    <TR valign="middle" align="center">
-                                                        <TD colSpan=3 height=40 valign="middle" align="center"><font
-                                                            face="黑体" size="4px" color="#196ed1"
-                                                            style="padding-left: 20px; vertical-align: middle">用户注册</font></TD>
-                                                    </TR>
-                                                    <TR>
-                                                        <td width="80" height="20" class="login_td">   用户名：</td>
-                                                        <td width="120" height="20" class="login_td"><input
-                                                            type="text" name="username" value="" style="WIDTH: 110px"
-                                                            onChange="chang1(this)"></td>
-                                                        <td id="usName"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td height="20" class="login_td">   密 码：</td>
-                                                        <td height="20" class="login_td"><input type="password"
-                                                            name="password" value="" style="WIDTH: 110px"
-                                                            onChange="chang2(this)"></td>
-                                                        <td id="ps1"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td height="20" class="login_td">   确认密码：</td>
-                                                        <td height="20" class="login_td"><input type="password"
-                                                            name="passwordAgain" value="" style="WIDTH: 110px"
-                                                            onChange="chang3(this)"></td>
-                                                        <td id="ps2"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td height="20" colspan="2" align="center">                    
-                                                        <button class="login_button" onClick=res();>重置</button>
-                                                         
-                                                    
-                                                    <button type="button" class="btn btn-primary">
-                                                                       提交更改
-                                                    </button>
-                                                         </td>
-                                                        <td class="login_td" align="left" width=81><a href="Login.html">返回</a></td>
-                                     
-                                                    </TR>
-                                                </TBODY>
-                                            </TABLE>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                            </form>
-                                    </body>
-                                    
-                                    
-                                                </div>
+                                    <html>
+                                            <head>
+                                                    <meta charset="utf-8"> 
+                                                    <title>Bootstrap 用户登陆</title>
+                                                    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+                                                    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+                                                    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                                                </head>
+                                                <body>
                                                 
-                                                <div class="modal-footer">
-                                                    
+                                                
+                                                <!-- 按钮触发模态框 -->
+                                                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                                                    Login
+                                                </button>
+                                                <!-- 模态框（Modal） -->
+                                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                                    &times;
+                                                                </button>
+                                                                <head>
+                                                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                                                <link href="css/regist.css" rel="stylesheet" type="text/css">
+                                                <title>网上购物系统</title>
+                                                <script type="text/javascript">
+                                                var reg=/^[a-zA-Z]\w*$/;
+                                                var flag1=false,flag2=false,flag3=false;
+                                                function chang1(obj){
+                                                    var name=obj.value;
+                                                    if(name.length<3||name.length>8){
+                                                        //alert("密码要求3-8位！");
+                                                        document.getElementById("usName").innerHTML="<font color='red'> 用户名要求3-8位！</font>";
+                                                    }
+                                                    else if(!reg.test(name)){
+                                                        //alert("用户名由字母开头，后字母、数字或下划线!");
+                                                        document.getElementById("usName").innerHTML="<font color='red'> 用户名由字母开头，后字母、数字或下划线</font>";
+                                                        flag1=false;
+                                                    }
+                                                    else{
+                                                        flag1=true;
+                                                        document.getElementById("usName").innerHTML="<font color='green'>可以使用</font>";
+                                                    }
+                                                }
+                                                function chang2(obj){
+                                                    var pwd=obj.value;
+                                                    if(pwd.length<6||pwd.length>8){
+                                                        //alert("密码要求3-8位！");
+                                                        document.getElementById("ps1").innerHTML="<font color='red'>密码要求3-8位！</font>";
+                                                    flag2=false;
+                                                    }
+                                                    else{
+                                                        document.getElementById("ps1").innerHTML="<font color='green'>可以使用</font>";
+                                                        flag2=true;
+                                                    }
+                                                }
+                                                function chang3(obj){
+                                                    var pwd1=obj.value;
+                                                    var pwd=document.regist.password.value;
+                                                    if(pwd1.length<6||pwd1.length>8){
+                                                        //alert("密码要求3-8位！");
+                                                        document.getElementById("ps2").innerHTML="<font color='red'>密码要求3-8位！</font>";
+                                                    }
+                                                    else if(pwd!=pwd1){
+                                                        //alert("两次输入密码不一致！");
+                                                        document.getElementById("ps2").innerHTML="<font color='red'>两次输入密码不一致！</font>";
+                                                    flag3=false;
+                                                    }
+                                                    else{
+                                                        document.getElementById("ps2").innerHTML="<font color='green'>可以使用</font>";
+                                                        flag3=true;
+                                                    }
+                                                }
+                                                function sub(){
+                                                    if(flag1&&flag2&&flag3){
+                                                        document.regist.submit();
+                                                    }
+                                                    else{
+                                                        alert("请填写注册信息");
+                                                    }
+                                                }
+                                                function res(){
+                                                    document.regist.username.value="";
+                                                    document.regist.password.value="";
+                                                    document.regist.passwordAgain.value="";
+                                                    document.getElementById("usName").innerHTML="";
+                                                    document.getElementById("ps1").innerHTML="";
+                                                    document.getElementById("ps2").innerHTML="";
+                                                }
+                                                </script>
+                                                </head>
+                                                <body>
+                                                <form method="POST" name="regist" action="RegistJsp.jsp">
+                                                <table style="height: 100%; width: 100%">
+                                                    <tr align="center" valign="middle">
+                                                        <td>
+                                                        <TABLE width="392" height="200" border=0 align="center" cellPadding=0
+                                                            cellSpacing=0
+                                                            style="background-image: url(./images/login_Page/logPage.jpg); height: 200; width: 392">
+                                                            <TBODY>
+                                                                <TR valign="middle" align="center">
+                                                                    <TD colSpan=3 height=40 valign="middle" align="center"><font
+                                                                        face="黑体" size="4px" color="#196ed1"
+                                                                        style="padding-left: 20px; vertical-align: middle">用户注册</font></TD>
+                                                                </TR>
+                                                                <TR>
+                                                                    <td width="80" height="20" class="login_td">   用户名：</td>
+                                                                    <td width="120" height="20" class="login_td"><input
+                                                                        type="text" name="username" value="" style="WIDTH: 110px"
+                                                                        onChange="chang1(this)"></td>
+                                                                    <td id="usName"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="20" class="login_td">   密 码：</td>
+                                                                    <td height="20" class="login_td"><input type="password"
+                                                                        name="password" value="" style="WIDTH: 110px"
+                                                                        onChange="chang2(this)"></td>
+                                                                    <td id="ps1"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="20" class="login_td">   确认密码：</td>
+                                                                    <td height="20" class="login_td"><input type="password"
+                                                                        name="passwordAgain" value="" style="WIDTH: 110px"
+                                                                        onChange="chang3(this)"></td>
+                                                                    <td id="ps2"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="20" colspan="2" align="center">                    
+                                                                    <button class="login_button" onClick=res();>重置</button>
+                                                                     
+                                                                
+                                                                <button type="button" class="btn btn-primary">
+                                                                                   提交更改
+                                                                </button>
+                                                                     </td>
+                                                                    <td class="login_td" align="left" width=81><a href="Login.html">返回</a></td>
+                                                 
+                                                                </TR>
+                                                            </TBODY>
+                                                        </TABLE>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                        </form>
+                                                </body>
+                                                
+                                                
+                                                            </div>
+                                                            
+                                                            <div class="modal-footer">
+                                                                
+                                                            </div>
+                                                        </div><!-- /.modal-content -->
+                                                    </div><!-- /.modal -->
                                                 </div>
-                                            </div><!-- /.modal-content -->
-                                        </div><!-- /.modal -->
-                                    </div>
-                                    </body>
+                                                </body>
+
+
+			</div>
+			
+			<div class="modal-footer">
+				
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+</body>
                                 </ul>
                                 <div class="currency language">
                                     <div class="current">
