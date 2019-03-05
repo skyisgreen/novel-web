@@ -158,26 +158,41 @@
                                                                         style="padding-left: 20px; vertical-align: middle">用户注册</font></TD>
                                                                 </TR>
                                                                 <TR>
-                                                                    <td width="80" height="20" class="login_td">   用户名：</td>
+                                                                    
+                                                                        <td class="login_td" align="left" width=81><a href="Login.html">用户名</a></td>
+                                                 
                                                                     <td width="120" height="20" class="login_td"><input
                                                                         type="text" name="username" value="" style="WIDTH: 110px"
                                                                         onChange="chang1(this)"></td>
                                                                     <td id="usName"></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td height="20" class="login_td">   密 码：</td>
+                                                                        <td class="login_td" align="left" width=81><a href="Login.html">密码</a></td>
                                                                     <td height="20" class="login_td"><input type="password"
                                                                         name="password" value="" style="WIDTH: 110px"
                                                                         onChange="chang2(this)"></td>
                                                                     <td id="ps1"></td>
                                                                 </tr>
+                                                            
                                                                 <tr>
-                                                                    <td height="20" class="login_td">   确认密码：</td>
+                                                                        <td class="login_td" align="left" width=81><a href="Login.html">确认密码</a></td>
                                                                     <td height="20" class="login_td"><input type="password"
                                                                         name="passwordAgain" value="" style="WIDTH: 110px"
                                                                         onChange="chang3(this)"></td>
                                                                     <td id="ps2"></td>
                                                                 </tr>
+                                                                //写到这里
+                                                             
+                                                                <td class="login_td" align="left" width=81><a href="Login.html">选择头像</a></td>
+                                                                <body>
+                                                              
+                                                                 <select name="photo"  onchange="return setImg()" >
+                                                                <option value="img/1.png" >吴磊</option>
+                                                                  <option value="img/2.png" >倪妮</option>
+                                                                    </select>
+        
+                                                                                <img name="img" src="images/img1.png" width="60px" height="65px">
+                                                                           
                                                                 <tr>
                                                                     <td height="20" colspan="2" align="center">                    
                                                                     <button class="login_button" onClick=res();>重置</button>
@@ -187,7 +202,7 @@
                                                                                    提交更改
                                                                 </button>
                                                                      </td>
-                                                                    <td class="login_td" align="left" width=81><a href="Login.html">返回</a></td>
+                                                                    <td class="login_td" align="left" width=81><a href="Login.html">登陆</a></td>
                                                  
                                                                 </TR>
                                                             </TBODY>
